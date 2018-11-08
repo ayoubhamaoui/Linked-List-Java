@@ -80,6 +80,22 @@ public class LinkedList {
 			size--;
 		}
 	}
+	
+	public void deletePos(int pos) {
+		if(pos==1) {
+			deleteFirst();
+		}else if(pos==size) {
+			deleteEnd();
+		}else if(pos>1 && pos<size) {
+			Node p;
+			p=start;
+			for(int i=1;i<pos-1;i++) {
+				p=p.getNext();
+			}
+			p.setNext(p.getNext().getNext());
+			size--;
+		}
+	}
 	public int getSize() {
 		return size;
 	}
