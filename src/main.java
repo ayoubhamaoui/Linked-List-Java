@@ -9,6 +9,9 @@ public class main {
 		A.insertAtEnd(7);
 		A.insertAtEnd(45);
 		A.insertAtPos(88, 3);
+		A.deleteFirst();
+		A.deleteFirst();
+		A.deleteEnd();
 	
 		A.viewList();
 		//System.out.println(A.getSize());

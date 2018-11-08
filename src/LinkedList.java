@@ -54,6 +54,32 @@ public class LinkedList {
 		}
 		size++;
 	}
+	
+	public void deleteFirst() {
+		if(size==0) {
+			System.out.println("List is empty!!");
+		}else {
+			
+			//I add p to set nest of first node null ( garbage cleaner) will clean this inref object
+			Node p;
+			p=start;
+			start=start.getNext();
+			p.setNext(null);
+			size--;
+		}
+	}
+	
+	public void deleteEnd() {
+		if(size==0&& size==1) {
+			size=0;
+			System.out.println("List is empty!!");
+		}else {
+			Node p,q;
+			for(p=start,q=start.getNext();q.getNext()!=null;p=p.getNext(),q=q.getNext());
+			p.setNext(null);
+			size--;
+		}
+	}
 	public int getSize() {
 		return size;
 	}
