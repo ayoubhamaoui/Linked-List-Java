@@ -18,10 +18,24 @@ public class LinkedList {
 	public void insertAtFirst(int x) {
 		Node n=new Node(x,start);
 		start=n;
-		size++;
-		
+		size++;	
 	}
-
+	
+	public void insertAtEnd(int x) {
+		if(size==0) {
+			Node n	=	new Node(x,start);
+			start=n;
+			size++;
+		}else {
+			Node n	=	new Node(x,null);
+			//node parcourir la liste
+			Node p;
+			for(p=this.start;p.getNext()!=null;p=p.getNext());
+			//we are sure that p is not null and he has ref of last node
+			p.setNext(n);
+			size++;
+		}
+	}
 	public int getSize() {
 		return size;
 	}
