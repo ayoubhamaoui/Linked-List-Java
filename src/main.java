@@ -7,7 +7,11 @@ public class main {
 		A.insertAtFirst(2);
 		A.insertAtFirst(5);
 		A.insertAtEnd(7);
+		A.insertAtEnd(45);
+		A.insertAtPos(88, 3);
+	
 		A.viewList();
+		//System.out.println(A.getSize());
 		
 
 	}
