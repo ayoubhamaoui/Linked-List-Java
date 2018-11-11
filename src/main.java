@@ -14,7 +14,10 @@ public class main {
 		A.deletePos(5);
 	
 		A.viewList();
-		//System.out.println(A.getSize());
+		System.out.println("\n\n########### LIST DETAILS ##########");
+		System.out.println("\tStart: "+A.getStart());
+		System.out.println("\tQueue: "+A.getQueue());
+		System.out.println("\tSize "+A.getSize());
 		
 
 	}

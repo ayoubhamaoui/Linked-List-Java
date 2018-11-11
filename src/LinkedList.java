@@ -1,7 +1,8 @@
 
-public class LinkedList {
+public class LinkedList{
 	private int size;
 	private Node start;
+	private Node queue;
 	
 	public LinkedList() {
 		size	=	0;
@@ -18,6 +19,9 @@ public class LinkedList {
 	public void insertAtFirst(int x) {
 		Node n=new Node(x,start);
 		start=n;
+		if(size==0) {
+			queue =n ;
+		}
 		size++;	
 	}
 	
@@ -25,6 +29,7 @@ public class LinkedList {
 		if(size==0) {
 			Node n	=	new Node(x,start);
 			start=n;
+			queue=n;
 		}else {
 			Node n	=	new Node(x,null);
 			//node parcourir la liste
@@ -32,6 +37,7 @@ public class LinkedList {
 			for(p=this.start;p.getNext()!=null;p=p.getNext());
 			//we are sure that p is not null and he has ref of last node
 			p.setNext(n);
+			queue	=	n;
 		}
 		size++;
 	}
@@ -100,10 +106,19 @@ public class LinkedList {
 		return size;
 	}
 	
+	public int getQueue() {
+		return this.queue.getData();
+	}
+	
+	public int getStart() {
+		return this.start.getData();
+	}
+	
 	public void viewList() {
 		Node n;
 		for(n=this.start;n!=null;n=n.getNext()) {
 			System.out.print(n.getData()+"\t");
 		}
 	}
+	
 }
