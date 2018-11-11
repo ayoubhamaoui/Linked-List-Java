@@ -114,6 +114,32 @@ public class LinkedList{
 		return this.start.getData();
 	}
 	
+	/*complexity: O(n^2) it's fine I just tried to use ref here I don't care about complexity of algo*/
+	public void sort() {
+		Node p,q;
+		int d;
+		for(p=this.start;p.getNext()!=null;p=p.getNext()) {
+			for(q=p.getNext();q!=null;q=q.getNext()) {
+				if(p.getData()>q.getData()) {
+					d=p.getData();
+					p.setData(q.getData());
+					q.setData(d);
+				}
+			}
+		}
+	}
+	
+	public void search(int d) {
+		Node p;
+		int i=1;
+		for(p=this.start;p!=null;p=p.getNext()) {
+			if(p.getData()==d) {
+				System.out.print("*List["+i+"]="+p.getData()+"\n");
+			}
+			i++;
+		}
+	}
+	
 	public void viewList() {
 		Node n;
 		for(n=this.start;n!=null;n=n.getNext()) {
