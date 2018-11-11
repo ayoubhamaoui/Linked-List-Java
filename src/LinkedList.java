@@ -132,11 +132,16 @@ public class LinkedList{
 	public void search(int d) {
 		Node p;
 		int i=1;
+		boolean find = false;
 		for(p=this.start;p!=null;p=p.getNext()) {
 			if(p.getData()==d) {
 				System.out.print("*List["+i+"]="+p.getData()+"\n");
+				find = true;
 			}
 			i++;
+		}
+		if(!find) {
+			System.out.println("Element not existe !");
 		}
 	}
 	

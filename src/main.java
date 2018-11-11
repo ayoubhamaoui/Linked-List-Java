@@ -21,7 +21,7 @@ public class main {
 		System.out.println("\tStart: "+A.getStart());
 		System.out.println("\tQueue: "+A.getQueue());
 		System.out.println("\tSize "+A.getSize());
-		A.search(1);
+		A.search(8);
 		
 		System.out.println("\n\n-----------using sorting method--------\n");
 		//After sorting
