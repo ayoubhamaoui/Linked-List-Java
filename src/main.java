@@ -25,7 +25,7 @@ public class main {
 		
 		System.out.println("\n\n-----------using sorting method--------\n");
 		//After sorting
-		//A.sort();
+		A.sort();
 		
 		A.viewList();
 		System.out.println("\n");
