@@ -144,7 +144,24 @@ public class LinkedList{
 			System.out.println("Element not existe !");
 		}
 	}
-	
+	public void Supprimer(int d) {
+		Node p,q;
+		for(p=start,q=start.getNext();q!=null;q=q.getNext()) {
+			if(start.getData()==d) {
+				start=start.getNext();
+				p=start;q=p.getNext();size--;
+			}
+			
+			if(q.getData()==d) {
+				p.setNext(q.getNext());size--;
+				if(q==queue) {
+					queue=p;
+				}
+			}else {
+				p=p.getNext();
+			}
+		}
+	}
 	public void viewList() {
 		Node n;
 		for(n=this.start;n!=null;n=n.getNext()) {

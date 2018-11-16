@@ -4,10 +4,10 @@ public class main {
 	public static void main(String[] args) {
 		LinkedList A=new LinkedList();
 		A.insertAtFirst(1);
-		A.insertAtFirst(2);
-		A.insertAtFirst(5);
+		A.insertAtFirst(1);
+		A.insertAtFirst(1);
 		A.insertAtEnd(7);
-		A.insertAtEnd(45);
+		A.insertAtEnd(1);
 		A.insertAtFirst(3);
 		A.insertAtEnd(1);
 		A.insertAtPos(88, 3);
@@ -25,7 +25,12 @@ public class main {
 		
 		System.out.println("\n\n-----------using sorting method--------\n");
 		//After sorting
-		A.sort();
+		//A.sort();
+		
+		A.viewList();
+		System.out.println("\n");
+		
+		A.Supprimer(1);
 		A.viewList();
 		System.out.println("\n\n########### LIST DETAILS ##########");
 		System.out.println("\tStart: "+A.getStart());
